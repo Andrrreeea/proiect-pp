@@ -17,7 +17,7 @@ class BundlePack
         string get_cod_de_bare_pack();
         void set_denumire_pack(string denumire_pack_nou);
         string get_denumire_pack();
-        BundlePack();
+        BundlePack(){};
     private:
         vector<Joc> jocuri_incluse;
         double pret_pack;
