@@ -20,6 +20,7 @@ class Joc
         bool get_cumpara();
         void set_categorie(string cod_bare_nou);
         string get_categorie();
+        ostream& operator<<(ostream& os);
         Joc(){};
     private:
         string cod_de_bare;
