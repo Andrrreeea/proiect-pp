@@ -27,6 +27,7 @@ void adaugare_joc(char *arg2, char* arg3,  char* arg4, char* arg5, char* arg6){
     j.set_cumpara(0);
     j.set_categorie(str2);
     jocuri_disponibile.push_back(j);
+    g<<j<<endl;
 }
 
 void sterge_joc(char *arg){
@@ -74,6 +75,7 @@ void adaugare_bundle_pack(char *arg2, char* arg3,  char* arg4, char* arg5){
     b.set_cod_de_bare_pack(str2);
     b.set_denumire_pack(str1);
     bundle_disponibile.push_back(b);
+    g1<<b<<endl;
 }
 
 void stergere_bundle_pack(char *arg){
@@ -133,7 +135,7 @@ int main(int nrArg, char **arguments)
 
     if(strcmp(arguments[1], "adaugare_joc") == 0){
         if(nrArg != 7){
-            cout << "Sintaxa gresita\n";
+            g << "Sintaxa gresita\n";
         }else{
            adaugare_joc(arguments[2],arguments[3],arguments[4],arguments[5],arguments[6]);
         }
@@ -142,7 +144,7 @@ int main(int nrArg, char **arguments)
 
     if(strcmp(arguments[1], "stergere_joc") == 0){
         if(nrArg != 3){
-            cout << "Sintaxa gresita \n";
+            g << "Sintaxa gresita \n";
         }else{
             sterge_joc(arguments[2]);
         }
@@ -151,7 +153,7 @@ int main(int nrArg, char **arguments)
 
     if(strcmp(arguments[1], "adaugare_bundle_pack") == 0){
         if(nrArg != 6){
-            cout << "Sintaxa gresita\n";
+            g1 << "Sintaxa gresita\n";
         }else{
             adaugare_bundle_pack(arguments[2],arguments[3],arguments[4],arguments[5]); //consider ca in momentul adaugarii unui joc, acesta nu e cumparat sau instalat
         }
@@ -160,7 +162,7 @@ int main(int nrArg, char **arguments)
 
     if(strcmp(arguments[1], "stergere_bundle_pack") == 0){
         if(nrArg != 3){
-            cout << "Sintaxa gresita \n";
+            g1 << "Sintaxa gresita \n";
         }else{
             stergere_bundle_pack(arguments[2]);
         }
@@ -169,12 +171,12 @@ int main(int nrArg, char **arguments)
 
     if(strcmp(arguments[1], "vizualizare_jocuri_cumparate") == 0){
         if(nrArg != 2){
-            cout << "Sintaxa gresita\n";
+            g << "Sintaxa gresita\n";
         }else{
             vizualizare_jocuri_cumparate();
         }
         return 0;
     }
-    cout << "Comanda invalida";
+    g << "Comanda invalida";
     return 0;
 }
