@@ -54,3 +54,7 @@ string Joc::get_categorie()
 {
     return categorie;
 };
+ostream& operator<<(ostream& os, Joc obj) {
+    os << obj.get_cod_de_bare() <<" " << obj.get_denumire() << " " << obj.get_pret()<< " " << obj.get_memorie() << " " <<obj.get_instalat() << " " <<obj.get_cumpara() << " " <<obj.get_categorie();
+    return os;
+}
